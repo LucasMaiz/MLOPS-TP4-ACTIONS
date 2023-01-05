@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pip install flask==1.1.2'
+                sh 'ls -l'
                 echo 'build code'
             }
         }
