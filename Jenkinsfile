@@ -18,7 +18,7 @@ pipeline {
         stage ('Deploy'){
             steps{
                 bat 'docker build -t im1 .'
-                bat 'docker run -d -p 5000:5000 --name d1 im1'
+                bat 'docker run -d -p 5000:5000 im1'
             }
         }
             
