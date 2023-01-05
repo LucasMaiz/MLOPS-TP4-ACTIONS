@@ -11,8 +11,7 @@ pipeline {
         
         stage('Test') {
             steps {
-                echo 'running test1'
-                echo 'running test2'
+                bat 'python -m unittest'
             }
         }
         stage ('Deploy'){
