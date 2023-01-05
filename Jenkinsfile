@@ -7,6 +7,8 @@ pipeline {
                 bat 'python --version'
             }
         }
+        
+        
         stage('Test') {
             steps {
                 echo 'running test1'
