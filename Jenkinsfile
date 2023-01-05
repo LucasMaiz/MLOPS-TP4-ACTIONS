@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'fetch code'
+                sh 'pip install -r requirements.txt'
                 echo 'build code'
             }
         }
