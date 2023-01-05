@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'python3 --version'
+                sh 'python3 --version'
             }
         }
         stage('Test') {
