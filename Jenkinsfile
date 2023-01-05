@@ -1,6 +1,11 @@
 pipeline {
     agent any
-        
+    
+    environment {
+        PATH = "${tool 'Python'}/Scripts:${env.PATH}"
+    }
+    
+    
     stages {
         stage('Build') {
             steps {
