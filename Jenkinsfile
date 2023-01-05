@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                bat 'echo %PATH%'
                 bat 'pip install -r requirments.txt'
             }
         }
