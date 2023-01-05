@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ls -l'
-                echo 'build code'
+                bat 'python --version'
             }
         }
         stage('Test') {
