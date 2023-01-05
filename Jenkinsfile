@@ -1,16 +1,12 @@
 pipeline {
-    agent any
+    agent { docker { image 'python:3.10.7-alpine' } }
     
-    environment {
-        PATH = "${tool 'Python'}/Scripts:${env.PATH}"
-    }
     
     
     stages {
         stage('Build') {
             steps {
-                bat 'echo %PATH%'
-                bat 'pip install -r requirments.txt'
+                bat 'python --version'
             }
         }
         stage('Test') {
