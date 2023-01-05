@@ -1,6 +1,10 @@
 pipeline {
-    agent { label 'windows' }
-
+    agent any
+    
+    environment {
+        PATH = "${tool 'Python'}/bin:${env.PATH}"
+    }
+    
     stages {
         stage('Build') {
             steps {
