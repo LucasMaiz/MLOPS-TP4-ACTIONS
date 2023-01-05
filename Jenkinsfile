@@ -1,14 +1,10 @@
 pipeline {
     agent any
-    
-    environment {
-        PATH = "${tool 'Python'}/bin:${env.PATH}"
-    }
-    
+        
     stages {
         stage('Build') {
             steps {
-                bat 'python --version'
+                bat 'python3 --version'
             }
         }
         stage('Test') {
