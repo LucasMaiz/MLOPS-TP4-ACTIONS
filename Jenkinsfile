@@ -14,7 +14,7 @@ pipeline {
         }
         stage ('Deploy'){
             steps{
-                echo 'test'
+                bat 'docker build -t vivejenkins .'
             }
         }
     }
