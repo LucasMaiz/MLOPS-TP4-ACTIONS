@@ -11,13 +11,14 @@ pipeline {
         
         stage('Test') {
             steps {
-                bat 'pip install flask'
+                bat 'python -m unittest'
             }
         }
         
         stage ('Deploy'){
             steps{
-                bat 'pip install flask'
+                bat 'docker build -t im1 .'
+                bat 'docker run -d -p 5000:5000 --name d1 im1'
             }
         }
             
