@@ -11,13 +11,13 @@ pipeline {
         
         stage('Test') {
             steps {
-                bat 'python -m unittest'
+                bat 'pip install flask'
             }
         }
         
         stage ('Deploy'){
             steps{
-                echo 'test'
+                bat 'pip install flask'
             }
         }
             
