@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'python --version'
+                bat 'pip install -r requirements.txt'
             }
         }
         
