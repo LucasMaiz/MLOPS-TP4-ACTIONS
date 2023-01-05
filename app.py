@@ -38,10 +38,6 @@ def hello():
 
 
 
-
-
-
-
 @app.route("/api/hello/<name>")
 def hello_name(name):
     """
