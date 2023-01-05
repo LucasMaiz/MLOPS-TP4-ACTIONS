@@ -8,7 +8,7 @@ pipeline {
                 bat 'pip install -r requirements.txt'
             }
         }
-        
+    
         stage('Test') {
             steps {
                 bat 'python -m unittest'
